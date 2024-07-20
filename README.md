@@ -20,15 +20,25 @@ Download IU and MIMIC-CXR datasets, and place them in `data` folder.
 - models: basic model
 
 ## Training and Testing
-- rename the images
-- -Run imgrename.py 
-- Run getreports.py get the text of the images
-- Run preprocess.py
-- Run CXRpre.py
-- Run cider_cache.py
-- Run train_mle.py
-- Run pretrain_discriminator.py. ```Make sure to provide the name of one of the checkpoints that were created when train_mle.py was run.```
-- Run train_pg.py. ```provide the names of checkpoints for both the generator and discriminator as command-line arguments.```
+- rename and pre-process the images
+```Run imgrename.py```
+```Run preprocess.py```
+```Run CXRpre.py```
+
+- get the text of the images
+```Run getreports.py```
+
+- build MIRQI loss based on TN, FP and FN by matching paired graphs in node-by-node fashion
+```Run CEmetric.py```
+
+- pre-train the generator and discriminator
+```Run train_mle.py```
+
+- pre-train language style evaluator when one of the checkpoints that were created when train_mle.py was run
+```Run pretrain_evaluator.py```
+
+- fine-tune the evaluator, discriminator and generator
+```Run train_pg.py```
 
 ## Reference codes:
 - https://github.com/cuhksz-nlp/R2Genhttps://github.com/cuhksz-nlp/R2Gen
