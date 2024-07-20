@@ -1,33 +1,4 @@
-# JAGAN
-
-# A implementation for the paper "CGFTrans: Cross-modal Global Feature Fusion Transformer for Medical Report Generation"
-
-## Citation
-```
-@inproceedings{chen2021cross,
-  title={Cross-modal Memory Networks for Radiology Report Generation},
-  author={Chen, Zhihong and Shen, Yaling and Song, Yan and Wan, Xiang},
-  booktitle={Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)},
-  pages={5904--5914},
-  year={2021}
- }
- 
-@inproceedings{chen2020generating,
-  title={Generating Radiology Reports via Memory-driven Transformer},
-  author={Chen, Zhihong and Song, Yan and Chang, Tsung-Hui and Wan, Xiang},
-  booktitle={Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
-  pages={1439--1449},
-  year={2020}
-}
-
-@article{xu2024cgftrans,
-  title={CGFTrans: Cross-Modal Global Feature Fusion Transformer for Medical Report Generation},
-  author={Xu, Liming and Tang, Quan and Zheng, Bochuan and Lv, Jiancheng and Li, Weisheng and Zeng, Xianhua},
-  journal={IEEE Journal of Biomedical and Health Informatics},
-  year={2024},
-  publisher={IEEE}
-}
-```
+# The implementation for the paper "JAGAN: Joint Attention GAN for Medical Report Generation with Clinical Style Preservation"
 
 ## Requirements
 
@@ -47,14 +18,6 @@ Download IU and MIMIC-CXR datasets, and place them in `data` folder.
 ## Folder Structure
 - data : store dataset
 - models: basic model
-- modules: 
-    - the layer define of our model 
-    - dataloader
-    - loss function
-    - metrics
-    - tokenizer
-    - some utils
-- pycocoevalcap: Microsoft COCO Caption Evaluation Tools
 
 ## Training and Testing
 - The validation and testing will run after training.
@@ -67,6 +30,16 @@ Download IU and MIMIC-CXR datasets, and place them in `data` folder.
         - mimic: MIMIC dataset
 - A pre-trained model is available [here](https://pan.quark.cn/s/f81481f4be44
 ) with 4z5v
+
+## To run the program:
+- Run imgrename.py rename the images
+- Run getreports.py get the text of the images
+- Run preprocess.py
+- Run CXRpre.py
+- Run cider_cache.py
+- Run train_mle.py
+- Run pretrain_discriminator.py. ```Make sure to provide the name of one of the checkpoints that were created when train_mle.py was run.```
+- Run train_pg.py. ```provide the names of checkpoints for both the generator and discriminator as command-line arguments.```
 
 ## Reference codes:
 - https://github.com/cuhksz-nlp/R2Genhttps://github.com/cuhksz-nlp/R2Gen
