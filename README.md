@@ -20,19 +20,8 @@ Download IU and MIMIC-CXR datasets, and place them in `data` folder.
 - models: basic model
 
 ## Training and Testing
-- The validation and testing will run after training.
-- More options can be found in `main_train` file.
-- The model will be trained using command:
-```bash train_{$dataset_name}.sh``` 
-- You can use the file ```bash test_{$dataset_name}.sh``` to test the model.
-    - $dataset_name:
-        - iu: IU dataset
-        - mimic: MIMIC dataset
-- A pre-trained model is available [here](https://pan.quark.cn/s/f81481f4be44
-) with 4z5v
-
-## To run the program:
-- Run imgrename.py rename the images
+- rename the images
+- -Run imgrename.py 
 - Run getreports.py get the text of the images
 - Run preprocess.py
 - Run CXRpre.py
