@@ -70,7 +70,7 @@ Ensure you have Python and the necessary libraries installed. You may need packa
 
 ## References
 
-- [Generating Radiology Reports via Memory-driven Transformer](R2Genhttps://github.com/cuhksz-nlp/R2Gen)
+- [Generating Radiology Reports via Memory-driven Transformer](https://github.com/cuhksz-nlp/R2Gen)
 - [Improving Image Captioning with Conditional Generative Adversarial Nets](https://github.com/beckamchen/ImageCaptionGAN)
 - [Multi-Task Learning with User Preferences: Gradient Descent with Controlled Ascent in Pareto Optimization](https://github.com/dbmptr/EPOSearch)
 - [Pareto Multi-Task Learning](https://github.com/Xi-L/ParetoMTL)
